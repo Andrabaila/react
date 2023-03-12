@@ -1,53 +1,46 @@
-RS School. React.
-This course is aimed to the students of the RS School which passed RS School stage #2 and for the new students, which have experience with :
+# Getting Started with Create React App
 
-JavaScript
-TypeScript
-Git, GitHub (clone, add, commit, push, pull, merge, rebase, работа с Pull Request)
-NPM, Webpack
-CSS3 / HTML5
-Chrome DevTools, Figma
-Understanding of the REST API ATTENTION! Mentors for this course will be first distributed for the graduates of the RS School stage #2.
-Course duration
-7 weeks are devoted to studying React and 3 more weeks to final task implementation. This course requires 20-40 hours per week
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Course program
-Week #1 (13th of March, 2023)
-React. Components
+## Available Scripts
 
-Week #2 (20th of March, 2023)
-React. Forms
+In the project directory, you can run:
 
-Week #3 (27th of March, 2023)
-React. API
+### `npm start`
 
-Week #4 (3rd of April, 2023)
-React. Hooks
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Week #5 (10th of April, 2023)
-React. Redux
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Week #6 (17th of April, 2023)
-React. SSR/SSG
+### `npm test`
 
-Week #7 (24th of April, 2023)
-Technical React Interview
-GraphiQL
-Week #8 (1st of May, 2023)
-Technical React Interview
-GraphiQL
-Week #9 (8th of May, 2023)
-Technical React Interview
-GraphiQL
-Week #10 (15th of May, 2023)
-Technical React Interview
-GraphiQL
-Week #11 (22nd of May, 2023)
-Cross-check review: - GraphiQL
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Lectors
-Ihar Krasiuk
-Olga Bugrova
-Andrej Podlubnyj
-Artyom Parfenenkov
-Valery Dluski
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
