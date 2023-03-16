@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './assets/styles/main.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { routes } from 'routes/routes';
 import Header from 'components/Header';

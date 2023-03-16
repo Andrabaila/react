@@ -1,0 +1,259 @@
+html {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+  font-family: "Roboto";
+  font-size: 10px;
+  color: #e8e9e9;
+  background-color: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+div,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e8e9e9;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 8px;
+  }
+}
+/* roboto-100 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-100.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-100italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 100;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-100italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-100italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-300italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-300italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-500italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-500italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-700italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900italic - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 900;
+  src: local(""), url("../fonts/roboto-v30-latin_cyrillic-900italic.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-900italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* pacifico-regular - latin_cyrillic */
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/pacifico-v22-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/pacifico-v22-latin_cyrillic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.button {
+  padding: 1.5rem 5rem;
+  border-radius: 2.5rem;
+  height: 5rem;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ff7b00;
+  transition: all 0.2s;
+}
+
+.button_x {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  justify-self: flex-start;
+  background-color: transparent;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button_x:hover {
+  transform: rotateZ(90deg);
+}
+
+.button_disabled {
+  border: 1px solid #3b3b3b;
+  background-color: #390000;
+  cursor: default;
+  color: #686969;
+}
+
+.button_disabled:hover {
+  border: 1px solid #3b3b3b;
+  background-color: #390000;
+  cursor: default;
+  box-shadow: none;
+  color: #686969;
+}
+
+.input {
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 2px;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+  height: 3rem;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number],
+input[type=number]:hover,
+input[type=number]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-input-placeholder {
+  font-size: 2.4rem;
+  color: #adadad;
+  text-align: center;
+}
+
+.input:focus {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.input_valid {
+  border: 1px solid #555555;
+}
+
+.input_valid:focus {
+  color: #e8e9e9;
+}
+
+.input_invalid {
+  position: relative;
+  border: 1px solid #d31414;
+  color: #d31414;
+}
+
+.input_invalid:focus {
+  color: #e8e9e9;
+}
+
+.form {
+  display: flex;
+}/*# sourceMappingURL=main.css.map */
