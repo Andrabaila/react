@@ -7,10 +7,13 @@ export const routes = [
   {
     path: '/',
     element: <App />,
-    errorElement: <PageNotFound />,
   },
   {
     path: 'about',
     element: <PageAbout />,
+  },
+  {
+    path: '*',
+    element: <PageNotFound />,
   },
 ];
