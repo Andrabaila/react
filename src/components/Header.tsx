@@ -1,16 +1,14 @@
+import getCurrentPageName from 'features/getCurrentPageName';
 import React from 'react';
+import Nav from './Nav';
 
 export default class Header extends React.Component {
   render() {
+    const currentPageName = getCurrentPageName();
     return (
       <header className="header">
-        <h1 className="header__title">This is header with PageName</h1>
-        <nav className="header__nav">
-          <ul>
-            <li>Main page</li>
-            <li>About</li>
-          </ul>
-        </nav>
+        <h1 className="header__title">{currentPageName}</h1>
+        <Nav />
       </header>
     );
   }

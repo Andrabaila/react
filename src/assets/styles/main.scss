@@ -1,5 +1,5 @@
 @import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins', 'abstracts/placeholders';
 
-@import 'base/reset', 'base/fonts', 'base/typography';
+@import 'base/body', 'base/main', 'base/link', 'base/buttons', 'base/reset', 'base/fonts', 'base/titles', 'base/typography', 'base/form', 'base/input', 'base/root';
 
-@import 'components/buttons', 'components/inputs',  'components/forms';
+@import 'components/Header', 'components/Nav', 'components/Search-bar';

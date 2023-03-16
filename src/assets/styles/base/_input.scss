@@ -1,15 +1,20 @@
-.input {
+input {
+    height: $input-height;
+    padding-left: 30px;
+
     border: 1px solid transparent;
     outline: none;
-    border-radius: 2px;
+    border-radius: 6px;
 
-    background-color: $color-light;
+    background-image: url('/src/assets/icons/search.svg');
+    background-position: 5px;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
 
     font-style: normal;
     font-weight: 500;
     font-size: $font-size-text_large;
     color: $color-text_dark;
-    height: $input-height;
 }
 
 input[type='number']::-webkit-outer-spin-button,
@@ -24,13 +29,13 @@ input[type='number']:focus {
     -moz-appearance: textfield;
 }
 
-.input::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
     font-size: $font-size-text_largest;
     color: $color-placeholder;
     text-align: center;
 }
 
-.input:focus {
+input:focus {
     border: 1px solid #ffffff;
 
     background-color: $color-focus;

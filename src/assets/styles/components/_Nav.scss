@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+}
+.nav-list {
+  display: flex;
+  gap: 2rem;
+
+  list-style-type: none;
+  font-size: $font-size-title2;
+}
