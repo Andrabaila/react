@@ -7,7 +7,7 @@ export default class PageAbout extends React.Component {
       <>
         <Header />
         <main className="About">
-          <div>About Us Main</div>
+          <h2>This is About Us page</h2>
         </main>
       </>
     );
