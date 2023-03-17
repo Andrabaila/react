@@ -4,7 +4,9 @@ button {
     height: $button-height;
 
     background-color: $color-light;
-    border: none;
+    border: 1px solid darker($color-background-lightest, 1);
+    box-shadow: 0 1px 3px darker($color-background-lightest, 3);
+    background-color: $color-light;
     cursor: pointer;
 
     font-family: 'Roboto';

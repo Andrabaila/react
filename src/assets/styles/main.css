@@ -18,6 +18,11 @@ main {
   width: 100%;
   padding: 1rem 2rem;
   flex-grow: 2;
+  gap: 4rem;
+}
+
+a {
+  transition: all 0.3s;
 }
 
 a:hover {
@@ -29,7 +34,9 @@ button {
   border-radius: 2.5rem;
   height: 5rem;
   background-color: #ffffff;
-  border: none;
+  border: 1px solid #d8d9d9;
+  box-shadow: 0 1px 3px #b8b9b9;
+  background-color: #ffffff;
   cursor: pointer;
   font-family: "Roboto";
   font-style: normal;
@@ -349,6 +356,7 @@ input:focus {
   gap: 2rem;
   list-style-type: none;
   font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .Search-bar {
@@ -356,4 +364,57 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #202020;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 560px;
+  padding: 2rem;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.Card__item_product-name {
+  text-align: center;
+}
+
+.Card-image {
+  width: 260px;
+  height: 260px;
+  align-self: center;
+}
+
+.Card__item_product-price,
+.Card__item_product-description {
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.Card__item_product-price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.Card__properties-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card__gap {
+  flex-grow: 2;
+}
+
+.Card__item_product-add-button {
+  padding: 0;
 }/*# sourceMappingURL=main.css.map */
