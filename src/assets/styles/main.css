@@ -268,6 +268,7 @@ form {
 }
 
 input {
+  width: 280px;
   height: 3rem;
   padding-left: 30px;
   border: 1px solid transparent;
@@ -357,6 +358,22 @@ input:focus {
   list-style-type: none;
   font-size: 2.4rem;
   font-weight: 700;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item_active:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  top: 100%;
+  right: calc(50% - 4px);
+  display: block;
+  position: absolute;
 }
 
 .Search-bar {
