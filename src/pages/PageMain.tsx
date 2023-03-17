@@ -1,14 +1,18 @@
+import Header from 'components/Header';
 import SearchBar from 'components/SearchBar';
 import React from 'react';
 
 export default class PageMain extends React.Component {
   render() {
     return (
-      <main className="Main__about">
-        <div>
-          <SearchBar />
-        </div>
-      </main>
+      <>
+        <Header />
+        <main className="Main">
+          <div>
+            <SearchBar />
+          </div>
+        </main>
+      </>
     );
   }
 }

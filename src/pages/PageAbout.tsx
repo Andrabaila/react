@@ -1,11 +1,15 @@
+import Header from 'components/Header';
 import React from 'react';
 
 export default class PageAbout extends React.Component {
   render() {
     return (
-      <main className="Main__about">
-        <div>About Us Main</div>
-      </main>
+      <>
+        <Header />
+        <main className="About">
+          <div>About Us Main</div>
+        </main>
+      </>
     );
   }
 }
