@@ -14,7 +14,9 @@ export default class PageMain extends React.Component {
         <Header />
         <main className="Main">
           <SearchBar />
-          <div className="card-list">{cards}</div>
+          <div className="card-list" data-testid="card-list">
+            {cards}
+          </div>
         </main>
       </>
     );

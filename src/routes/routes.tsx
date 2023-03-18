@@ -1,10 +1,10 @@
-import App from 'App';
-import PageAbout from 'pages/PageAbout';
-import PageNotFound from 'pages/PageNotFound';
+import App from '../App';
+import PageAbout from '../pages/PageAbout';
+import PageNotFound from '../pages/PageNotFound';
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, RouteObject } from 'react-router-dom';
 
-export const routes = [
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <App />,
