@@ -1,5 +1,5 @@
-import UI from 'data/UI';
-import getPageState from 'features/getPageState';
+import UI from '../data/UI';
+import getPageState from '../features/getPageState';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 

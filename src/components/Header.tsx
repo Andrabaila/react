@@ -1,4 +1,4 @@
-import getCurrentPageName from 'features/getCurrentPageName';
+import getCurrentPageName from '../features/getCurrentPageName';
 import React from 'react';
 import Nav from './Nav';
 

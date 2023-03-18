@@ -1,5 +1,5 @@
-import getSearchInputValue from 'features/getSearchInputValue';
-import setSearchInputValue from 'features/setSearchInputValue';
+import getSearchInputValue from '../features/getSearchInputValue';
+import setSearchInputValue from '../features/setSearchInputValue';
 import React from 'react';
 
 export default class SearchBar extends React.Component {

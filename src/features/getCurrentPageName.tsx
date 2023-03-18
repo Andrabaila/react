@@ -1,4 +1,4 @@
-import UI from 'data/UI';
+import UI from '../data/UI';
 
 function getCurrentPageName() {
   let currentPageName = window.location.pathname.split('/').pop();

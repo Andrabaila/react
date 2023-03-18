@@ -1,7 +1,7 @@
-import Card from 'components/Card';
-import Header from 'components/Header';
-import SearchBar from 'components/SearchBar';
-import cardsArray from 'data/cardsArray';
+import Card from '../components/Card';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+import cardsArray from '../data/cardsArray';
 import React from 'react';
 
 export default class PageMain extends React.Component {
