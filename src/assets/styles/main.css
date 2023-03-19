@@ -424,4 +424,10 @@ input:focus {
 
 .Card__item_product-add-button {
   padding: 0;
+}
+
+.main__404 {
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */

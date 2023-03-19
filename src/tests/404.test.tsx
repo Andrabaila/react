@@ -13,6 +13,6 @@ test('renders 404 page', () => {
       <PageNotFound />
     </MemoryRouter>
   );
-  const notFound = screen.getByText(/Page not found/i);
+  const notFound = screen.getByText(/Sorry, there is no such page/i);
   expect(notFound).toBeInTheDocument();
 });
