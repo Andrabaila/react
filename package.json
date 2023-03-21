@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "jest --watchAll --coverage --collectCoverageFrom=src/**/*.tsx",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext .tsx",
+    "lint": "eslint .",
     "prettier": "prettier --write ."
   },
   "eslintConfig": {

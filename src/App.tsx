@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PageMain from './pages/PageMain';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render(): React.ReactNode {
     return <PageMain />;
   }
