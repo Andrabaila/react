@@ -6,6 +6,8 @@ function getCurrentPageName() {
     currentPageName = UI.mainPageName;
   } else if (currentPageName === 'about') {
     currentPageName = UI.aboutPageName;
+  } else if (currentPageName === 'forms') {
+    currentPageName = UI.pageFormsName;
   } else {
     currentPageName = UI.pageNotFoundName;
   }

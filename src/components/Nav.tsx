@@ -14,6 +14,9 @@ export default class Nav extends React.Component {
           <li className={`nav__item nav__item_${getPageState(UI.aboutPageName)}`}>
             <NavLink to="/about">{UI.aboutPageName}</NavLink>
           </li>
+          <li className={`nav__item nav__item_${getPageState(UI.pageFormsName)}`}>
+            <NavLink to="/forms">{UI.pageFormsName}</NavLink>
+          </li>
         </ul>
       </nav>
     );

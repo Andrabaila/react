@@ -6,4 +6,5 @@
   "editor.formatOnSave": true,
   "eslint.validate": ["typescript"],
   "eslint.alwaysShowStatus": true,
+  "workbench.settings.openDefaultSettings": true,
 }
