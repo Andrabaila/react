@@ -1,0 +1,22 @@
+.Form {
+  gap: $gap;
+  align-items: center;
+  justify-content: center;
+}
+
+.InputCheckbox,
+.InputDate,
+.InputFile,
+.InputRadio,
+.InputSelect,
+.InputText {
+  padding: 5px;
+
+  background-image: unset;
+  background-size: unset;
+}
+
+.ButtonSubmit {
+  width: 280px;
+  padding: 0;
+}

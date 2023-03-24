@@ -255,6 +255,7 @@ h3 {
 
 form {
   display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -430,4 +431,26 @@ input:focus {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+.Form {
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.InputCheckbox,
+.InputDate,
+.InputFile,
+.InputRadio,
+.InputSelect,
+.InputText {
+  padding: 5px;
+  background-image: unset;
+  background-size: unset;
+}
+
+.ButtonSubmit {
+  width: 280px;
+  padding: 0;
 }/*# sourceMappingURL=main.css.map */

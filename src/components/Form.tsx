@@ -1,26 +1,23 @@
-import getSearchInputValue from '../features/getSearchInputValue';
-import setSearchInputValue from '../features/setSearchInputValue';
 import React from 'react';
+import ButtonSubmit from './ButtonSubmit';
+import InputCheckbox from './InputCheckbox';
+import InputDate from './InputDate';
+import InputFile from './InputFile';
+import InputRadio from './InputRadio';
+import InputSelect from './InputSelect';
+import InputText from './InputText';
 
 export default class Form extends React.Component {
-  state = {
-    searchInputValue: getSearchInputValue(),
-  };
-  componentDidMount() {
-    this.setState({ searchInputValue: getSearchInputValue() });
-    window.addEventListener('beforeunload', () => setSearchInputValue(this.state.searchInputValue));
-  }
-  componentWillUnmount() {
-    localStorage.setItem('searchInputValue', this.state.searchInputValue);
-  }
   render() {
     return (
-      <form className="Search-bar">
-        <input
-          type="search"
-          value={this.state.searchInputValue}
-          onChange={(event) => this.setState({ searchInputValue: event.target.value })}
-        />
+      <form className="Form">
+        <InputText />
+        <InputDate />
+        <InputSelect />
+        <InputCheckbox />
+        <InputRadio />
+        <InputFile />
+        <ButtonSubmit />
       </form>
     );
   }
