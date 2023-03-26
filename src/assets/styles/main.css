@@ -427,6 +427,10 @@ input:focus {
   padding: 0;
 }
 
+.formCard {
+  background-color: #767474;
+}
+
 .main__404 {
   justify-content: center;
   align-items: center;
