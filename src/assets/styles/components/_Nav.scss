@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+
+  list-style-type: none;
+  font-size: $font-size-title2;
+  font-weight: 700;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item_active:after {
+  content:'';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $color-light;
+  top: 100%;
+  right: calc(50% - 4px);
+  display: block;
+  position: absolute;
+}

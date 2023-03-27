@@ -1,0 +1,23 @@
+h1 {
+  margin: 0;
+  align-self: center;
+
+  text-align: center;
+  font-size: $font-size-title1;
+}
+
+h2 {
+  margin: 0;
+
+  text-align: center;
+  font-size: $font-size-title2;
+  transition: all 0.3s;
+}
+
+h3 {
+  margin: 0;
+
+  font-size: $font-size-title3;
+  color: $color-text;
+  font-weight: 700;
+}
