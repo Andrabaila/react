@@ -6,7 +6,11 @@ export default class FormCard extends React.Component<FormCardObj> {
     return (
       <div className="formCard">
         <h3 className="Card__item_product-name">{this.props.title}</h3>
-        <img className="Card-image" src={this.props.thumbnail} alt="card image" />
+        <img
+          className="Card-image"
+          src={URL.createObjectURL(this.props.thumbnail)}
+          alt="card image"
+        />
         <div className="Card__properties-container">
           <p className="Card__item_product-stock">
             In stock: <b>{this.props.checkbox}</b>

@@ -50,6 +50,10 @@ button:hover {
   transform: scale(1.05);
 }
 
+.ButtonSubmit {
+  margin-top: 1rem;
+}
+
 .button_x {
   position: absolute;
   right: 8px;
@@ -253,12 +257,18 @@ h3 {
   position: absolute;
 }
 
+select {
+  width: 100%;
+  max-width: 280px;
+}
+
 form {
   display: flex;
   flex-direction: column;
 }
 
-input {
+input,
+select {
   width: 280px;
   height: 3rem;
   padding-left: 30px;
@@ -273,6 +283,10 @@ input {
   font-weight: 500;
   font-size: 2rem;
   color: #000000;
+}
+
+input[type=radio] {
+  width: 3rem;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -374,6 +388,25 @@ input:focus {
   width: 100%;
 }
 
+.FormCardList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #202020;
+}
+
+.formCard {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 360px;
+  padding: 2rem;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
 .card-list {
   display: flex;
   justify-content: center;
@@ -427,10 +460,6 @@ input:focus {
   padding: 0;
 }
 
-.formCard {
-  background-color: #767474;
-}
-
 .main__404 {
   justify-content: center;
   align-items: center;
@@ -441,6 +470,31 @@ input:focus {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  gap: 0.5rem;
+}
+
+.form__item_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.form__label {
+  align-self: flex-start;
+  font-size: 1.8rem;
 }
 
 .InputCheckbox,
@@ -449,7 +503,7 @@ input:focus {
 .InputRadio,
 .InputSelect,
 .InputText {
-  padding: 5px;
+  padding: 0 5px;
   background-image: unset;
   background-size: unset;
 }

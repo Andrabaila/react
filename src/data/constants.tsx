@@ -22,7 +22,7 @@ export const ERROR_MESSAGES = {
   titleError: 'title required and must be at least three letters',
   dateError: 'date required and must be less than today',
   selectError: 'category required and must be selected',
-  checkboxError: 'checkbox required',
+  checkboxError: 'in stock required',
   radioError: 'brand required and must be selected',
   fileError: 'file required and must be image',
 };

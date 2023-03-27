@@ -30,8 +30,8 @@ export interface RegularExpressions {
 export type FormCardObj = {
   title: string;
   date: string;
-  checkbox: boolean;
+  checkbox: string;
   category: string;
   brand: string;
-  thumbnail: string;
+  thumbnail: File;
 };
