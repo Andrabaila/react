@@ -1,0 +1,14 @@
+@import '../../shared/styles/abstracts/variables';
+
+.header {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: $max-width-layout;
+  padding: 2rem 2rem 1rem 2rem;
+
+  background-color: $color-background;
+}

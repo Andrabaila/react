@@ -1,0 +1,51 @@
+@import '../../shared/styles/abstracts/variables';
+
+.Form {
+  gap: $gap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  gap: $gap / 2;
+}
+
+.form__item_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  font-size: $font-size-text_small;
+}
+
+.form__label{
+  align-self: flex-start;
+
+  font-size: $font-size-text;
+}
+
+.InputCheckbox,
+.InputDate,
+.InputFile,
+.InputRadio,
+.InputSelect,
+.InputText {
+  padding: 0 5px;
+
+  background-image: unset;
+  background-size: unset;
+}
+
+.ButtonSubmit {
+  width: 280px;
+  padding: 0;
+}
