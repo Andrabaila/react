@@ -3,7 +3,7 @@ import PageAbout from '../../pages/about/PageAbout';
 import PageNotFound from '../../pages/404/PageNotFound';
 import React from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
-import PageForms from '../../pages/forms/PageForms';
+import PageForms from '../../pages/forms';
 
 export const routes: RouteObject[] = [
   {
