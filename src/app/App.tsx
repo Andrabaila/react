@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../shared/styles/main.scss';
-import PageMain from '../pages/main/PageMain';
+import PageMain from '../pages/main';
 
-export default class App extends Component {
-  render(): React.ReactNode {
-    return <PageMain />;
-  }
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  return isLoading ? <div>Loading...</div> : <PageMain />;
 }

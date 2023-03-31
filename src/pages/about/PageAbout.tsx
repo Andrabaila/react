@@ -1,4 +1,4 @@
-import Header from '../../widgets/header/Header';
+import Header from '../../widgets/header';
 import React from 'react';
 
 export default class PageAbout extends React.Component {

@@ -1,4 +1,4 @@
-import Header from '../../widgets/header/Header';
+import Header from '../../widgets/header';
 import React from 'react';
 import Form from '../../widgets/form/Form';
 import FormCardList from '../../widgets/formCardList/FormCardList';

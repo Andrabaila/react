@@ -1,4 +1,4 @@
-import getCurrentPageName from '../getCurrentPageName/getCurrentPageName';
+import getCurrentPageName from '../getCurrentPageName';
 
 function getPageState(page: string) {
   if (page === getCurrentPageName()) {

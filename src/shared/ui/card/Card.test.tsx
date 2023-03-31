@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Card from './Card';
+import Card from './';
 import cardsArray from '../../data/cardsArray';
 
 test('renders card', () => {
