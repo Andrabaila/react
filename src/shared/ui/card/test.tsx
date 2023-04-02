@@ -5,14 +5,15 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import PageMain from './';
+import Card from '.';
+import cardsArray from '../../data/cardsArray';
 
-test('renders card-list', () => {
+test('renders card', () => {
   render(
     <MemoryRouter>
-      <PageMain />
+      <Card {...cardsArray[0]} />
     </MemoryRouter>
   );
-  const testId = screen.getByTestId('card-list');
-  expect(testId).toBeInTheDocument();
+  const altText = screen.getByAltText('card image');
+  expect(altText).toBeInTheDocument();
 });

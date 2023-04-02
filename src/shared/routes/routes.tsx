@@ -1,6 +1,6 @@
-import App from '../../app/App';
-import PageAbout from '../../pages/about/PageAbout';
-import PageNotFound from '../../pages/404/PageNotFound';
+import App from '../../app';
+import PageAbout from '../../pages/about';
+import PageNotFound from '../../pages/404';
 import React from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 import PageForms from '../../pages/forms';

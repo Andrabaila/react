@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import PageNotFound from './PageNotFound';
+import PageNotFound from '.';
 
 test('renders 404 page', () => {
   render(

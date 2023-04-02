@@ -1,6 +1,6 @@
 import { ERROR_MESSAGES, REFS } from '../../shared/data/constants';
 import { FormCardObj } from '../../shared/data/types';
-import { validateInput } from '../../features/validateInput/validateInput';
+import { validateInput } from '../../features/validateInput';
 import React, { FormEvent, useRef, useState } from 'react';
 import ButtonSubmit from '../../shared/ui/buttonSubmit';
 import InputCheckbox from '../../shared/ui/inputCheckbox';

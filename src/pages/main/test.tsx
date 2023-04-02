@@ -5,14 +5,14 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import PageForms from './';
+import PageMain from '.';
 
-test('renders forms page', () => {
+test('renders card-list', () => {
   render(
     <MemoryRouter>
-      <PageForms />
+      <PageMain />
     </MemoryRouter>
   );
-  const titleLabel = screen.getByText(/Title/i);
-  expect(titleLabel).toBeInTheDocument();
+  const testId = screen.getByTestId('card-list');
+  expect(testId).toBeInTheDocument();
 });
