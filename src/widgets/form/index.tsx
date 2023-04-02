@@ -1,7 +1,5 @@
-import { ERROR_MESSAGES, REFS } from '../../shared/data/constants';
-import { FormCardObj } from '../../shared/data/types';
-import { validateInput } from '../../features/validateInput';
-import React, { FormEvent, useRef, useState } from 'react';
+import { FormCardObj, InputFormData } from '../../shared/data/types';
+import React from 'react';
 import ButtonSubmit from '../../shared/ui/buttonSubmit';
 import InputCheckbox from '../../shared/ui/inputCheckbox';
 import InputDate from '../../shared/ui/inputDate';
@@ -10,103 +8,49 @@ import InputRadio from '../../shared/ui/inputRadio';
 import InputSelect from '../../shared/ui/inputSelect';
 import InputText from '../../shared/ui/inputText';
 import './styles.scss';
+import { useForm } from 'react-hook-form';
 
 interface FormProps {
   addCard: (card: FormCardObj) => void;
 }
 
 const Form: React.FC<FormProps> = ({ addCard }) => {
-  const [titleError, setTitleError] = useState('');
-  const [dateError, setDateError] = useState('');
-  const [selectError, setSelectError] = useState('');
-  const [checkboxError, setCheckboxError] = useState('');
-  const [radioError, setRadioError] = useState('');
-  const [fileError, setFileError] = useState('');
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<InputFormData>({
+    reValidateMode: 'onSubmit',
+    mode: 'onSubmit',
+  });
 
-  const titleInputTextRef = useRef<HTMLInputElement>(null);
-  const inputDateRef = useRef<HTMLInputElement>(null);
-  const categoryInputSelectRef = useRef<HTMLSelectElement>(null);
-  const stockInputCheckboxRef = useRef<HTMLInputElement>(null);
-  const belitaInputRadioRef = useRef<HTMLInputElement>(null);
-  const vitexInputRadioRef = useRef<HTMLInputElement>(null);
-  const thumbnailInputFileRef = useRef<HTMLInputElement>(null);
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const titleValue = titleInputTextRef.current?.value;
-    const titleName = titleInputTextRef.current?.name;
-    const dateValue = inputDateRef.current?.value;
-    const selectValue = categoryInputSelectRef.current?.value;
-    const checkboxValue = stockInputCheckboxRef.current?.checked;
-    const belitaRadioValue = belitaInputRadioRef.current?.checked;
-    const vitexRadioValue = vitexInputRadioRef.current?.checked;
-    const fileValue = thumbnailInputFileRef.current?.files?.[0];
-
-    if (!validateInput(titleValue, titleName)) {
-      setTitleError(ERROR_MESSAGES.titleError);
-      return;
-    } else {
-      setTitleError('');
-    }
-
-    if (!dateValue || !(new Date(dateValue) < new Date())) {
-      setDateError(ERROR_MESSAGES.dateError);
-      return;
-    } else {
-      setDateError('');
-    }
-
-    if (selectValue === '') {
-      setSelectError(ERROR_MESSAGES.selectError);
-      return;
-    } else {
-      setSelectError('');
-    }
-
-    if (!checkboxValue) {
-      setCheckboxError(ERROR_MESSAGES.checkboxError);
-      return;
-    } else {
-      setCheckboxError('');
-    }
-
-    if (!belitaRadioValue && !vitexRadioValue) {
-      setRadioError(ERROR_MESSAGES.radioError);
-      return;
-    } else {
-      setRadioError('');
-    }
-
-    if (!fileValue) {
-      setFileError(ERROR_MESSAGES.fileError);
-      return;
-    } else {
-      setFileError('');
-    }
+  const onSubmit = (data: InputFormData) => {
     const card = {
-      title: titleValue!,
-      date: dateValue!,
-      checkbox: selectValue ? 'Yes' : 'No',
-      category: selectValue!,
-      brand: belitaRadioValue ? 'BELITA' : 'VITEX',
-      thumbnail: fileValue,
+      title: data.title,
+      date: data.date,
+      checkbox: data.checkbox ? 'Yes' : 'No',
+      category: data.category,
+      brand: data.brand,
+      thumbnail: data.thumbnail[0],
     };
     addCard(card);
-    REFS.userForm.current?.reset();
+    reset();
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit} ref={REFS.userForm}>
-      <InputText titleRef={titleInputTextRef} errorMessage={titleError} />
-      <InputDate dateRef={inputDateRef} errorMessage={dateError} />
-      <InputSelect selectRef={categoryInputSelectRef} errorMessage={selectError} />
-      <InputCheckbox checkboxRef={stockInputCheckboxRef} errorMessage={checkboxError} />
-      <InputRadio
-        belitaRef={belitaInputRadioRef}
-        vitexRef={vitexInputRadioRef}
-        errorMessage={radioError}
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      <InputText register={register} required name="title" errorMessage={errors?.title?.message} />
+      <InputDate register={register} errorMessage={errors?.date?.message} />
+      <InputSelect
+        register={register}
+        required
+        name="category"
+        errorMessage={errors?.category?.message}
       />
-      <InputFile fileRef={thumbnailInputFileRef} errorMessage={fileError} />
+      <InputCheckbox register={register} errorMessage={errors?.checkbox?.message} />
+      <InputRadio register={register} required errorMessage={errors?.brand?.message} />
+      <InputFile register={register} required errorMessage={errors?.thumbnail?.message} />
       <ButtonSubmit />
     </form>
   );

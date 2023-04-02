@@ -1,18 +1,27 @@
 import { ERROR_MESSAGES } from '../../data/constants';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
+import { UseFormRegister } from 'react-hook-form';
+import { InputFormData } from 'shared/data/types';
 
 interface InputDateProps {
-  dateRef: React.RefObject<HTMLInputElement>;
-  errorMessage: string;
+  register: UseFormRegister<InputFormData>;
+  errorMessage: string | undefined;
 }
 
-const InputDate: React.FC<InputDateProps> = ({ dateRef, errorMessage }) => {
+const InputDate: FunctionComponent<InputDateProps> = ({ register, errorMessage }) => {
   return (
     <div className="form__item">
       <label className="form__label" htmlFor="date">
         Date
       </label>
-      <input className="InputDate" type="date" name="date" ref={dateRef} />
+      <input
+        className="InputDate"
+        type="date"
+        {...register('date', {
+          required: ERROR_MESSAGES.dateError,
+          validate: (value) => new Date(value) < new Date() || ERROR_MESSAGES.dateError,
+        })}
+      />
       {errorMessage && <p>{ERROR_MESSAGES.dateError}</p>}
     </div>
   );

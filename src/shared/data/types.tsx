@@ -35,3 +35,12 @@ export type FormCardObj = {
   brand: string;
   thumbnail: File;
 };
+
+export type InputFormData = {
+  title: string;
+  date: string;
+  checkbox: string;
+  category: string;
+  brand: string;
+  thumbnail: FileList;
+};
