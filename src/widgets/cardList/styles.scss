@@ -1,0 +1,10 @@
+@import '../../shared/styles/abstracts/variables';
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $gap * 2;
+
+  color: $color-text;
+}

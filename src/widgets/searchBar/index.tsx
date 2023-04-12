@@ -1,24 +1,48 @@
-import getSearchInputValue from '../../features/getSearchInputValue';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect, KeyboardEvent } from 'react';
 import './styles.scss';
+import getCharacters from '../../shared/api/getCharacters';
 
-export default function SearchBar() {
-  const [searchInputValue, setSearchInputValue] = useState(getSearchInputValue());
+const SearchBar = () => {
+  const [searchBarValue, setSearchBarValue] = useState<string>(
+    localStorage.getItem('searchBarValue') || ''
+  );
+  const inputRef = useRef<string>(searchBarValue);
 
   useEffect(() => {
-    localStorage.setItem('searchInputValue', searchInputValue);
-    const handleBeforeUnload = () => setSearchInputValue(getSearchInputValue());
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [searchInputValue]);
+    inputRef.current = searchBarValue;
+  }, [searchBarValue]);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchInputValue(event.target.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchBarValue(event.target.value);
   };
+
+  const handleSubmit = async (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.target instanceof HTMLInputElement && event.key === 'Enter') {
+      setSearchBarValue(event.target.value);
+      console.log('hello');
+      event.preventDefault();
+      getCharacters();
+    }
+  };
+
+  useEffect(() => {
+    const savedSearchBarValue = localStorage.getItem('searchBarValue');
+    savedSearchBarValue && setSearchBarValue(savedSearchBarValue);
+    return () => {
+      localStorage.setItem('searchBarValue', inputRef.current || '');
+    };
+  }, []);
 
   return (
     <form className="Search-bar">
-      <input type="search" value={searchInputValue} onChange={handleInputChange} />
+      <input
+        type="search"
+        value={searchBarValue}
+        onChange={handleChange}
+        onKeyDown={handleSubmit}
+      />
     </form>
   );
-}
+};
+
+export default SearchBar;
