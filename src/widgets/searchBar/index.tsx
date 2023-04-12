@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, KeyboardEvent } from 'react';
 import './styles.scss';
+import getCharacters from '../../shared/api/getCharacters';
 
 const SearchBar = () => {
   const [searchBarValue, setSearchBarValue] = useState<string>(
@@ -15,6 +16,15 @@ const SearchBar = () => {
     setSearchBarValue(event.target.value);
   };
 
+  const handleSubmit = async (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.target instanceof HTMLInputElement && event.key === 'Enter') {
+      setSearchBarValue(event.target.value);
+      console.log('hello');
+      event.preventDefault();
+      getCharacters();
+    }
+  };
+
   useEffect(() => {
     const savedSearchBarValue = localStorage.getItem('searchBarValue');
     savedSearchBarValue && setSearchBarValue(savedSearchBarValue);
@@ -25,7 +35,12 @@ const SearchBar = () => {
 
   return (
     <form className="Search-bar">
-      <input type="search" value={searchBarValue} onChange={handleChange} />
+      <input
+        type="search"
+        value={searchBarValue}
+        onChange={handleChange}
+        onKeyDown={handleSubmit}
+      />
     </form>
   );
 };
