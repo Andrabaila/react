@@ -14,7 +14,6 @@ export const REFS: FormRefs = {
 
 export const REGULAR_EXPRESSIONS: RegularExpressions = {
   title: /[a-zA-Z]{3,}/,
-  phone: /^\+[0-9]{9}/,
   date: /^(0?[1-9]|1[012])\/(\d\d)$/,
 };
 

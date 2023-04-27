@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 560px;
   padding: 2rem;
+  gap: $gap;
 
   font-size: $font-size-text_small;
   background-color: $color-light;
